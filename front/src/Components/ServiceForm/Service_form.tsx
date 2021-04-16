@@ -10,7 +10,7 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
-import { serviceRegister } from "../../services/calls";
+import { serviceRegister, getInitialCars } from "../../services/calls";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
@@ -67,8 +67,8 @@ const ServiceForm: React.FC<ServiceFormProps> = ({
       setForm({});
       //limpiar la form de
       setExpanded(!expanded);
-
       //actualizar el estado de los chips
+      window.location.replace("/");
     }
   };
   return (
